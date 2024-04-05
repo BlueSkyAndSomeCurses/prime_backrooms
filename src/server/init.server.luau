@@ -9,5 +9,20 @@ local function collectAssetIds(folder)
 	end
 end
 
-collectAssetIds(textures)
+collectAssetIds(textures, #assetsIds)
 print(assetsIds)
+
+counter = 1
+assetsIdsLen = #assetsIds
+
+for _, asset in ipairs(backrooms:GetDescendants()) do
+    if asset:IsA("Texture") then
+        asset.Texture = assetsIds[counter]
+
+        if counter == assetsIdsLen then
+            counter = 0
+        end
+
+        counter += 1
+    end
+end

@@ -1,5 +1,6 @@
 {
   "name": "prime_backrooms",
+  "globIgnorePaths": ["Workspace"],
   "tree": {
     "$className": "DataModel",
 
