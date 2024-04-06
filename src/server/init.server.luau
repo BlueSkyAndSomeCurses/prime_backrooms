@@ -26,3 +26,7 @@ for _, asset in ipairs(backrooms:GetDescendants()) do
         counter += 1
     end
 end
+
+game.Players.PlayerAdded:Connect(function(player)
+    print("hello world")
+end)
